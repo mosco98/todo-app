@@ -20,16 +20,16 @@ const AddTodoModal = ({ updateShowModal, AddNewTodo }) => {
   }
   return (
     <>
-      <div className="overlay" onClick={() => updateShowModal(false)} />
+      <div className="over-lay" onClick={() => updateShowModal(false)} />
       <form className="add-todo-form shadow-sm p-8" onSubmit={FormSubmitHandler}>
         <input
           type="text"
-          className="p-2"
+          className="p-1"
           placeholder="Enter new todo"
           autoFocus={true}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <button className="bg-green-500 text-white text-sm rounded p-2 mx-1">Add todo</button>
+        <button className="bg-green-500 text-white text-sm rounded p-1 mx-1">Add todo</button>
       </form>
     </>
   )
