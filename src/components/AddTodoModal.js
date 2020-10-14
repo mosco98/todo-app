@@ -29,7 +29,7 @@ const AddTodoModal = ({ updateShowModal, AddNewTodo }) => {
           autoFocus={true}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <button className="bg-green-500 text-white text-sm rounded p-2 mx-1">Add todo</button>
+        <button className="bg-green-500 text-white text-sm rounded p-2">Add todo</button>
       </form>
     </>
   )
