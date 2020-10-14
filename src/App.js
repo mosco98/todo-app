@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 import AddTodoModal from './components/AddTodoModal'
 import TodoList from './components/TodoList'
 
+const name = 'mos{code}'
+
 const App = () => {
   const [todos, setTodos] = useState([])
   const [showModal, updateShowModal] = useState(false)
@@ -52,10 +54,10 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <div className="App overflow-hidden">
       {showModal && <AddTodoModal updateShowModal={updateShowModal} AddNewTodo={AddNewTodo} />}
       {todos.length ? (
-        <div className="absolute top-0 right-0 m-2">
+        <div className="absolute top-0 w-full bg-white px-2 py-4 flex item-center justify-end">
           <button className="bg-green-500 text-white text-sm rounded p-1 mx-1" onClick={() => updateShowModal(true)}>
             Add Todo
           </button>
@@ -74,6 +76,17 @@ const App = () => {
           </button>
         </>
       )}
+      <footer>
+        <small className="m-2">
+          Made by with{' '}
+          <span role="img" aria-label="love">
+            ❤️
+          </span>{' '}
+          <a href="https://moscode.netlify.app" target="_blank" rel="noopener noreferrer">
+            {name}
+          </a>
+        </small>
+      </footer>
     </div>
   )
 }
