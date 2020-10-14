@@ -12,7 +12,9 @@ const TodoList = ({ todos, DeleteTodo, MarkComplete }) => {
           {completedTodos.length === todos.length ? (
             <>Yayyy! You've completed all your todos</>
           ) : (
-            <>{completedTodos.length} completed</>
+            <>
+              {completedTodos.length}/{todos.length} completed
+            </>
           )}
         </small>
       </div>
